@@ -8,7 +8,7 @@ export default function Header() {
       <div>Header</div>
       <ul>
         <li>
-          <Link to="/products" >Products</Link>
+          <Link to="/shop" >Products</Link>
         </li>
         <li>
           <Link to="/cart">Cart</Link>
