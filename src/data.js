@@ -5,7 +5,7 @@ const data = {
       name: "Currents",
       author: "Tame Impala",
       price: 25,
-      image:"./images/currents.jpg"
+      image: "./images/currents.jpg"
     },
     {
       id: 2,

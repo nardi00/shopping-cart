@@ -1,6 +1,6 @@
 import React from "react";
-import Header from "./Components/Header/Header";
-import data from "./Components/data/data";
+import Header from "./Components/Header";
+import data from "./data";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Cart from "./Views/Cart/Cart";
 import Home from "./Views/Home/Home";
@@ -19,8 +19,8 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/cart" element={<Cart />} />
-            <Route path="/shop" element={<Shop />} />
-            <Route exact path="/shop/:id" element={<Product />} />
+            <Route path="/shop" element={<Shop productItems={productItems}/>} />
+            <Route exact path="/shop/:id" element={<Product/>} />
           </Routes>
         </Main>
       </Layout>

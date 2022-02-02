@@ -23,5 +23,5 @@ export const Container = styled.div`
       letter-spacing: 4px;
     }
   }
-
+  }
 `
