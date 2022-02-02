@@ -1,11 +1,11 @@
 import React from 'react';
-import { Navbar } from './Styles';
+import { Navbar, Title } from './Styles';
 import { Link } from 'react-router-dom'
 
 export default function Header() {
   return(
     <Navbar>
-      <div>Header</div>
+      <Title><Link to="/" >Recordrrr</Link></Title>
       <ul>
         <li>
           <Link to="/shop" >Products</Link>
