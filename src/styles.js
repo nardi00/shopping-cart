@@ -10,15 +10,15 @@ export const Main = styled.main`
   flex: 1;
   display: flex;
   justify-content: center;
+  background: #2c3e50; /* fallback for old browsers */
   background: -webkit-linear-gradient(
-    360deg,
-    #50c9c3 10%,
-    #96deda 360%
-  ); /* Chrome 10+, Saf5.1+ */
-  background: -o-linear-gradient(
-    360deg,
-    #50c9c3 10%,
-    #96deda 360%
-  ); /* Opera 11.10+ */
-  background: linear-gradient(360deg, #50c9c3 10%, #96deda 360%); /* W3C */
+    to right,
+    #4ca1af,
+    #2c3e50
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #4ca1af,
+    #2c3e50
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 `;
