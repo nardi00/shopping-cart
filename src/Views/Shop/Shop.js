@@ -1,7 +1,8 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { Container, Screen, ProductsContainer, ProductCard, Price } from "./styles";
 
-const Shop = ({ productItems }) => {
+const Shop = ({ productItems, handleAddProduct }) => {
   return (
     <Screen>
       <Container>
@@ -9,7 +10,7 @@ const Shop = ({ productItems }) => {
         <ProductsContainer>
           {productItems.map((item) => (
             <ProductCard>
-              <img src={item.image} alt={item.name}/>
+            <Link to={`shop/${item.id}`} ><img src={item.image} alt={item.name}/></Link>
               <div>
                 <h3>{item.name}</h3>
                 <p>{item.author}</p>
@@ -17,7 +18,7 @@ const Shop = ({ productItems }) => {
               <Price>
                 <div>
                 <p>${item.price}</p>
-                <button>Add to cart</button>
+                <button >Add to cart</button>
                 </div>
               </Price>
             </ProductCard>

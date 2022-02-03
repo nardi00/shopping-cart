@@ -16,12 +16,15 @@ export const Navbar = styled.div`
       color: black;
       transition: 0.5s;
     }
-    & > li:not(:first-child) a {
+    & > li:not(:first-child) a{
       padding-left: 20px;
     }
   }
   @media (max-width: 630px) {
     justify-content: center;
+    h1{
+      display: none;
+    }
   }
 `;
 

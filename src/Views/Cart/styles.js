@@ -7,9 +7,10 @@ export const Screen = styled.div`
 
 export const Container = styled.div`
   display: flex;
-  align-items: center;
   flex-direction: column;
   padding: 10px 40px;
+  background-color: white;
+  align-items:center;
   & > h1 {
     font-family: "Syne";
     font-size: 30px;
@@ -20,15 +21,24 @@ export const Container = styled.div`
 export const ProductsContainer = styled.div`
   justify-content: center;
   margin-top: 20px;
-  display: flex;
-  flex-wrap: wrap;
 `;
+
+export const NoItems = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  justify-content: center; 
+  align-items: center;
+  & > h1 {
+  font-family: "Syne";
+  font-size: 20px;  
+  }
+`
 
 export const ProductCard = styled.div`
   flex: 0 1 300px;
-  border: 1px solid black;
   display: flex;
-  flex-direction: column;
   align-items: center;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -37,12 +47,11 @@ export const ProductCard = styled.div`
   margin: 10px 10px 20px;
   a {
     & > img {
-    height: 250px;
-    width: 250px;
+    height: 100px;
+    width: 100px;
   }
   }
   & > p {
-    margin-top: 10px;
     font-family: "Work Sans";
     font-weight: 400;
   }

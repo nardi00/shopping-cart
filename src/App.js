@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Header from "./Components/Header";
 import data from "./data";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
@@ -10,6 +10,7 @@ import { Layout, Main } from "./styles";
 
 function App() {
   const { productItems } = data;
+  const [cartItems, setCart] = useState;
 
   return (
     <Router>
@@ -18,9 +19,12 @@ function App() {
         <Main>
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/cart" element={<Cart />} />
-            <Route path="/shop" element={<Shop productItems={productItems}/>} />
-            <Route exact path="/shop/:id" element={<Product/>} />
+            <Route path="/cart" element={<Cart cartItems={cartItems} />} />
+            <Route
+              path="/shop"
+              element={<Shop productItems={productItems}/>}
+            />
+            <Route exact path="/shop/:id" element={<Product />} />
           </Routes>
         </Main>
       </Layout>
