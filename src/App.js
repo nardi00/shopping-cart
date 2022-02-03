@@ -44,7 +44,7 @@ function App() {
   return (
     <Router basename="/shopping-cart" >
       <Layout>
-        <Header />
+        <Header cartItems={cartItems} />
         <Main>
           <Routes>
             <Route path="/" element={<Home />} />

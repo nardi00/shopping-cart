@@ -16,6 +16,10 @@ export const Navbar = styled.div`
       font-size: 20px;
       color: black;
       transition: 0.5s;
+      text-decoration: none;
+    }
+    & > li a:hover {
+      letter-spacing: 4px;
     }
     & > li:not(:first-child) a{
       padding-left: 20px;
