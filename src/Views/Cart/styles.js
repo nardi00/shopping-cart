@@ -46,7 +46,7 @@ export const ProductCard = styled.div`
   padding-left: 20px;
   padding-right: 20px;
   margin: 10px 10px 20px;
-  border: 1px solid black;
+  border: 1px solid #ede7e6;
   h3 {
     font-family: "Work Sans";
     font-weight: 700;
