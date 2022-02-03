@@ -9,7 +9,6 @@ export const Container = styled.div`
   display: flex;
   padding: 10px 40px;
   align-items: center;
-  justify-content: center;
   flex-direction: column;
   & > h1 {
     font-family: "Syne";
