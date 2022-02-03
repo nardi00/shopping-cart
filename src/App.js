@@ -42,7 +42,7 @@ function App() {
   };
 
   return (
-    <Router>
+    <Router basename="/shopping-cart" >
       <Layout>
         <Header />
         <Main>
