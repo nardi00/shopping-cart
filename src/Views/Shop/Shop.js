@@ -18,7 +18,7 @@ const Shop = ({ productItems, handleAddProduct }) => {
               <Price>
                 <div>
                 <p>${item.price}</p>
-                <button >Add to cart</button>
+                <button onClick={() => handleAddProduct(item)}>Add to cart</button>
                 </div>
               </Price>
             </ProductCard>

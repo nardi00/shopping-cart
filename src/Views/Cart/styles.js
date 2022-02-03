@@ -45,11 +45,9 @@ export const ProductCard = styled.div`
   padding-left: 20px;
   padding-right: 20px;
   margin: 10px 10px 20px;
-  a {
-    & > img {
-    height: 100px;
-    width: 100px;
-  }
+  & > img {
+    height: 150px;
+    width: 150px;
   }
   & > p {
     font-family: "Work Sans";

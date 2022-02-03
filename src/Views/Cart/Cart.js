@@ -15,6 +15,7 @@ import { Screen, Container, ProductsContainer, ProductCard, NoItems } from './st
           {cartItems.map((item) => (
             <ProductCard>
               <img src={item.image} alt={item.name}/>
+              <p>{item.name}</p>
             </ProductCard>
           ))}
         </ProductsContainer>

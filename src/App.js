@@ -10,7 +10,18 @@ import { Layout, Main } from "./styles";
 
 function App() {
   const { productItems } = data;
-  const [cartItems, setCart] = useState;
+  const [cartItems, setCart] = useState([]);
+
+  const handleAddProduct = (product) => {
+    const ProductExists = cartItems.find((item) => item.id === product.id)
+    if(ProductExists) {
+      setCart(cartItems.map((item) => item.id === product.id ?
+      {...ProductExists, quantity: ProductExists.quantity + 1}: item)
+    )}
+    else {
+      setCart([...cartItems, {...product, quantity: 1}])
+    }
+  }
 
   return (
     <Router>
@@ -22,7 +33,7 @@ function App() {
             <Route path="/cart" element={<Cart cartItems={cartItems} />} />
             <Route
               path="/shop"
-              element={<Shop productItems={productItems}/>}
+              element={<Shop productItems={productItems} handleAddProduct={handleAddProduct} />}
             />
             <Route exact path="/shop/:id" element={<Product />} />
           </Routes>
