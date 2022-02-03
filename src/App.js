@@ -67,17 +67,6 @@ function App() {
                 />
               }
             />
-{/*             <Route
-              exact
-              path="/shop/:id"
-              render={(routeProps) => (
-                <Product
-                  productItems={productItems}
-                  itemId={routeProps.match.params.id}
-                  handleAddProduct={handleAddProduct}
-                />
-              )}
-            /> */}
           </Routes>
         </Main>
       </Layout>
