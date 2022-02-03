@@ -7,10 +7,10 @@ export const Screen = styled.div`
 
 export const Container = styled.div`
   display: flex;
-  flex-direction: column;
   padding: 10px 40px;
-  background-color: white;
-  align-items:center;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   & > h1 {
     font-family: "Syne";
     font-size: 30px;
@@ -28,23 +28,32 @@ export const NoItems = styled.div`
   flex-direction: column;
   width: 100%;
   height: 100%;
-  justify-content: center; 
+  justify-content: center;
   align-items: center;
   & > h1 {
-  font-family: "Syne";
-  font-size: 20px;  
+    font-family: "Syne";
+    font-weight: 400;
+    color: #C0C0C0;
+    font-size: 30px;
   }
-`
+`;
 
 export const ProductCard = styled.div`
-  flex: 0 1 300px;
   display: flex;
+  width: 500px;
   align-items: center;
   padding-top: 10px;
   padding-bottom: 10px;
   padding-left: 20px;
   padding-right: 20px;
   margin: 10px 10px 20px;
+  border: 1px solid black;
+  h3 {
+    font-family: "Work Sans";
+    font-weight: 700;
+    font-size: 16px;
+    margin-left: 10px
+  }
   & > img {
     height: 150px;
     width: 150px;
@@ -57,10 +66,12 @@ export const ProductCard = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
     width: 100%;
     margin-top: 20px;
     font-family: "Work Sans";
+    button {
+      cursor: pointer;
+    }
 
     h3 {
       font-weight: 700;
@@ -77,27 +88,63 @@ export const ProductCard = styled.div`
 export const Price = styled.div`
   display: flex;
   width: 100%;
+  margin-left: 20px;
   & > div {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
+    width: 100px;
     font-family: "Work Sans";
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-bottom: 10px;
 
     & > button {
       background-color: white;
-      padding: 5px 10px;      
+      padding: 5px 10px;
       border-radius: 5px;
       font-weight: 500;
       transition: 0.5s;
-      cursor:pointer;
-      &:hover{
+      cursor: pointer;
+      &:hover {
         background-color: black;
         color: white;
       }
     }
   }
 `;
+
+export const Checkout = styled.div`
+  display: flex;
+  flex-direction: column; 
+  width: 100%;
+  height: 200px;
+  font-family: "Work Sans";
+  font-weight: 600;
+  padding: 20px;
+  border-top: 3px solid black;
+  & > h1 {
+    font-size: 30px;
+    color: #C0C0C0;
+  }
+  & > div {
+    display: flex; 
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: space-between;
+    h1 {
+      font-size: 30px;
+    }
+    & > button {
+      background-color: black;
+      color: white;
+      padding: 5px 10px;
+      border-radius: 5px;
+      font-weight: 500;
+      transition: 0.5s;
+      cursor: pointer;
+      &:hover {
+        background-color: white;
+        color: black;
+      }
+    }
+  }
+`

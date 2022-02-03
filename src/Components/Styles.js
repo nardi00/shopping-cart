@@ -7,6 +7,7 @@ export const Navbar = styled.div`
   width: 100%;
   padding: 10px 40px;
   font-family: "Work Sans";
+  background-color: ghostwhite;
 
   & > ul {
     display: flex;

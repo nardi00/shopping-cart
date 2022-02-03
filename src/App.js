@@ -13,15 +13,34 @@ function App() {
   const [cartItems, setCart] = useState([]);
 
   const handleAddProduct = (product) => {
-    const ProductExists = cartItems.find((item) => item.id === product.id)
-    if(ProductExists) {
-      setCart(cartItems.map((item) => item.id === product.id ?
-      {...ProductExists, quantity: ProductExists.quantity + 1}: item)
-    )}
-    else {
-      setCart([...cartItems, {...product, quantity: 1}])
+    const ProductExists = cartItems.find((item) => item.id === product.id);
+    if (ProductExists) {
+      setCart(
+        cartItems.map((item) =>
+          item.id === product.id
+            ? { ...ProductExists, quantity: ProductExists.quantity + 1 }
+            : item
+        )
+      );
+    } else {
+      setCart([...cartItems, { ...product, quantity: 1 }]);
     }
-  }
+  };
+
+  const handleRemoveProduct = (product) => {
+    const ProductExists = cartItems.find((item) => item.id === product.id);
+    if (ProductExists.quantity === 1) {
+      setCart(cartItems.filter((item) => item.id !== product.id));
+    } else {
+      setCart(
+        cartItems.map((item) =>
+          item.id === product.id
+            ? { ...ProductExists, quantity: ProductExists.quantity - 1 }
+            : item
+        )
+      );
+    }
+  };
 
   return (
     <Router>
@@ -30,10 +49,24 @@ function App() {
         <Main>
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/cart" element={<Cart cartItems={cartItems} />} />
+            <Route
+              path="/cart"
+              element={
+                <Cart
+                  cartItems={cartItems}
+                  handleAddProduct={handleAddProduct}
+                  handleRemoveProduct={handleRemoveProduct}
+                />
+              }
+            />
             <Route
               path="/shop"
-              element={<Shop productItems={productItems} handleAddProduct={handleAddProduct} />}
+              element={
+                <Shop
+                  productItems={productItems}
+                  handleAddProduct={handleAddProduct}
+                />
+              }
             />
             <Route exact path="/shop/:id" element={<Product />} />
           </Routes>
