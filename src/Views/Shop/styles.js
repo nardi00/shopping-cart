@@ -35,11 +35,10 @@ export const ProductCard = styled.div`
   padding-left: 20px;
   padding-right: 20px;
   margin: 10px 10px 20px;
-  a {
-    & > img {
-    height: 250px;
-    width: 250px;
-  }
+
+  & > img {
+    height: 300px;
+    width: 300px;
   }
   & > p {
     margin-top: 10px;
@@ -80,14 +79,18 @@ export const Price = styled.div`
     padding-right: 10px;
     padding-bottom: 10px;
 
+    p {
+      font-size: 18px;
+    }
+
     & > button {
       background-color: white;
-      padding: 5px 10px;      
+      padding: 5px 10px;
       border-radius: 5px;
       font-weight: 500;
       transition: 0.5s;
-      cursor:pointer;
-      &:hover{
+      cursor: pointer;
+      &:hover {
         background-color: black;
         color: white;
       }

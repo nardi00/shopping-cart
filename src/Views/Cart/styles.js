@@ -118,7 +118,7 @@ export const Checkout = styled.div`
   font-family: "Work Sans";
   font-weight: 600;
   padding: 20px;
-  border-top: 3px solid black;
+  border-top: 2px solid #C0C0C0;
   & > h1 {
     font-size: 30px;
     color: #C0C0C0;

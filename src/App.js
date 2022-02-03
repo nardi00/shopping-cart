@@ -4,7 +4,6 @@ import data from "./data";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Cart from "./Views/Cart/Cart";
 import Home from "./Views/Home/Home";
-import Product from "./Views/Product/Product";
 import Shop from "./Views/Shop/Shop";
 import { Layout, Main } from "./styles";
 
@@ -68,7 +67,17 @@ function App() {
                 />
               }
             />
-            <Route exact path="/shop/:id" element={<Product />} />
+{/*             <Route
+              exact
+              path="/shop/:id"
+              render={(routeProps) => (
+                <Product
+                  productItems={productItems}
+                  itemId={routeProps.match.params.id}
+                  handleAddProduct={handleAddProduct}
+                />
+              )}
+            /> */}
           </Routes>
         </Main>
       </Layout>

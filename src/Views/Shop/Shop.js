@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { Container, Screen, ProductsContainer, ProductCard, Price } from "./styles";
 
 const Shop = ({ productItems, handleAddProduct }) => {
@@ -10,7 +9,7 @@ const Shop = ({ productItems, handleAddProduct }) => {
         <ProductsContainer>
           {productItems.map((item) => (
             <ProductCard>
-            <Link to={`shop/${item.id}`} ><img src={item.image} alt={item.name}/></Link>
+            <img src={item.image} alt={item.name}/>
               <div>
                 <h3>{item.name}</h3>
                 <p>{item.author}</p>
