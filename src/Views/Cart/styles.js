@@ -82,6 +82,10 @@ export const ProductCard = styled.div`
       color: #ede7e6;
     }
   }
+  @media(max-width: 650px) {
+    width: 300px;
+    flex-direction: column;
+  }
 `;
 
 export const Price = styled.div`
